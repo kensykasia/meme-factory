@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/roboto-regular.woff2') format('woff2')
+}
+
+:root {
+    --black-color: black;
+    --white-color: white;
+    --light-gray: #F6F6F6;
+    --primary-blue: #5D50E6;
+    --cta-button-color: #f39c12;
+    --cta-button-hover: #6EEF86;
+    --cta-button-hover-text: #5D50E6;
+}
+
+body {
+    margin: 0;
+}
+
+button, 
+select {
+    all: unset;
+    color: var(--black-color);
+}
+
+button {
+    font-family: 'Robot', sans-serif;
+    text-align: center;
+}
+
+.application {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+/* Navbar Header */
+.navbar-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-gray);
+}
+
+.logo-container {
+    padding-bottom: 12px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: var(--black-color);
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-blue);
+}
+
+/* Main Section */
+.main-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--light-gray);
+    padding: 0 20px 32px; 
+}
+
+.main-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5%;
+    right: 10%;
+    width: 60px; 
+    height: 60px;
+    background-image: url('assets/icons/dots.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-section::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    width: 40px; 
+    height: 40px;
+    background-image: url('assets/icons/triangle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-section h1 {
+    font-family: 'Roboto';
+    font-size: 3.5em;
+    text-align: center;
+    margin: 0;
+    padding: 32px 0;
+}
+
+.main-section p {
+    font-size: 1.5em;
+    font-family: 'Roboto';
+    max-width: 90%;
+    margin: 0;
+}
+
+.main-section .cta-button {
+    position: relative;
+    width: 200px;
+    margin: 24px 0;
+    padding: 18px;
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: var(--cta-button-color);
+    border: 3px solid var(--black-color);
+    border-radius: 25px;
+    transition: 0.5s ease-in;
+}
+
+.main-section .cta-button:hover {
+    background-color: var(--cta-button-hover);
+    color: var(--cta-button-hover-text);
+}
+
+/* App Section */
+.app-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 15% 5%;
+    background-color: var(--primary-blue);
+}
+
+.app-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2%;
+    left: 5%;
+    width: 80px; 
+    height: 80px;
+    background-image: url('assets/icons/flower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--primary-blue);
+    background-color: var(--light-gray);
+    font-size: 0.9em;
+}
+
+@media (min-width: 1024px) {
+    .navbar-header{
+        flex-direction: row;
+    }
+
+    .logo-container {
+        flex: 1;
+        padding-bottom: 0;
+    }
+
+    .main-section {
+        padding: 64px 0;
+    }
+
+    .main-section p {
+        max-width: 40%;
+    }
+
+    .app-section {
+        padding: 10% 5%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main-section::before {
+        top: 5%;
+        right: 20%;
+        width: 65px; 
+        height: 65px;
+    }
+
+    .main-section::after {
+        top: 65%;
+        right: 15%;
+        width: 45px; 
+        height: 45px;
+    }
+    .app-section {
+        flex-wrap: nowrap;
+    }
+
+    .app-section::before {
+        top: -4%;
+        left: 15%;
+        width: 85px; 
+        height: 85px;
+    }   
+}

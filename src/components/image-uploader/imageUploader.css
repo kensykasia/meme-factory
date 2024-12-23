@@ -1,0 +1,107 @@
+:root {
+    --black-color: black;
+    --white-color: white;
+    --light-green: #6EEF86;
+    --yellow: #f39c12;
+    --border-color: black;
+}
+
+.upload-panel-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 18px;
+    border: 3px solid var(--border-color);
+    background-color: var(--white-color);
+    border-radius: 20px;
+    box-shadow: 5px 5px var(--border-color);
+    font-size: 1.3em;
+    max-width: 500px;
+}
+
+.image-uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-uploader h3 {
+    font-family: 'Roboto';
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+.file-upload-wrapper {
+    padding-bottom: 24px;
+}
+
+.custom-file-label {
+    font-size: 1em;
+    font-family: 'Roboto';
+    font-weight: 600;
+    background-color: var(--light-green);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: 0.5s ease-in;
+}
+
+.custom-file-label:hover {
+    background-color: var(--yellow);
+    color: var(--white-color);
+}
+
+.preloaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+.preloaded-images img {
+    width: 135px;
+    border: 3px dashed var(--border-color);
+    border-radius: 20px;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.preloaded-images img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .upload-panel-wrapper {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: unset;
+        padding: 32px;
+    }
+
+    .preloaded-images {
+        gap: 20px;
+        justify-content: center;
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 1440px) { 
+    .upload-panel-wrapper {
+        flex: unset;
+        max-width: 500px;
+    }
+
+    .preloaded-images {
+        padding-top: 24px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}

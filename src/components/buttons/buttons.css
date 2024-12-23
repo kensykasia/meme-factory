@@ -1,0 +1,46 @@
+:root {
+    --white-color: white;
+    --black-color: black;
+    --pink-color: pink;
+    --blue-color: #36B7F6;   
+    --pink-color-dark: #D5006B;
+    --blue-color-dark: #1A7FB9;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.buttons button {
+    font-size: 1em;
+    font-family: 'Roboto';
+    font-weight: 600;
+    padding: 10px 25px;
+    width: 100%;
+    border: 3px solid var(--black-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.buttons button:first-of-type {
+    background-color: var(--pink-color);
+}
+
+.buttons button:first-of-type:hover {
+    background-color: var(--pink-color-dark);
+}
+
+.buttons button:last-of-type {
+    background-color: var(--blue-color);
+}
+
+.buttons button:last-of-type:hover {
+    background-color: var(--blue-color-dark);
+}
+
+.buttons button:hover {
+    color: var(--white-color);
+}
