@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/blabla/static/css/main.e6a74f67.css",
-    "main.js": "/blabla/static/js/main.a820b4e3.js",
-    "static/media/image4.jpg": "/blabla/static/media/image4.a7e3899ef4f2c6b9d3df.jpg",
-    "static/media/image6.jpg": "/blabla/static/media/image6.2d84d324ff6b842ac376.jpg",
-    "static/media/image2.jpg": "/blabla/static/media/image2.4ad33a1878a41333bcd2.jpg",
-    "static/media/image1.jpg": "/blabla/static/media/image1.67638326d65c8f621208.jpg",
-    "static/media/image5.jpg": "/blabla/static/media/image5.20071bb7f85f829e5ca4.jpg",
-    "static/media/image3.jpg": "/blabla/static/media/image3.53d461750dd37b0cb5b9.jpg",
-    "static/media/roboto-regular.woff2": "/blabla/static/media/roboto-regular.60c6d073cfdf57bc03d2.woff2",
-    "static/media/logo.png": "/blabla/static/media/logo.296efc3d8998145c50ff.png",
-    "index.html": "/blabla/index.html",
-    "main.e6a74f67.css.map": "/blabla/static/css/main.e6a74f67.css.map",
-    "main.a820b4e3.js.map": "/blabla/static/js/main.a820b4e3.js.map"
+    "main.css": "/meme-factory/static/css/main.00cae747.css",
+    "main.js": "/meme-factory/static/js/main.38b8b52e.js",
+    "static/media/image4.jpg": "/meme-factory/static/media/image4.a7e3899ef4f2c6b9d3df.jpg",
+    "static/media/image6.jpg": "/meme-factory/static/media/image6.2d84d324ff6b842ac376.jpg",
+    "static/media/image2.jpg": "/meme-factory/static/media/image2.4ad33a1878a41333bcd2.jpg",
+    "static/media/image1.jpg": "/meme-factory/static/media/image1.67638326d65c8f621208.jpg",
+    "static/media/image5.jpg": "/meme-factory/static/media/image5.20071bb7f85f829e5ca4.jpg",
+    "static/media/image3.jpg": "/meme-factory/static/media/image3.53d461750dd37b0cb5b9.jpg",
+    "static/media/roboto-regular.woff2": "/meme-factory/static/media/roboto-regular.60c6d073cfdf57bc03d2.woff2",
+    "static/media/logo.png": "/meme-factory/static/media/logo.296efc3d8998145c50ff.png",
+    "index.html": "/meme-factory/index.html",
+    "main.00cae747.css.map": "/meme-factory/static/css/main.00cae747.css.map",
+    "main.38b8b52e.js.map": "/meme-factory/static/js/main.38b8b52e.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6a74f67.css",
-    "static/js/main.a820b4e3.js"
+    "static/css/main.00cae747.css",
+    "static/js/main.38b8b52e.js"
   ]
 }
