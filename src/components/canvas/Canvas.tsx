@@ -56,27 +56,36 @@ const Canvas: React.FC<CanvasProps> = ({
         if (!canvas) return { x: 0, y: 0 };
 
         const rect = canvas.getBoundingClientRect();
+        const scale = canvas.width / rect.width;
 
         if ("touches" in event) {
             const touch = event.touches[0];
             if (!touch) return { x: 0, y: 0 };
             return {
-                x: touch.clientX - rect.left,
-                y: touch.clientY - rect.top,
+                x: (touch.clientX - rect.left) * scale,
+                y: (touch.clientY - rect.top) * scale,
             };
         } else {
             return {
-                x: event.clientX - rect.left,
-                y: event.clientY - rect.top,
+                x: (event.clientX - rect.left) * scale,
+                y: (event.clientY - rect.top) * scale,
             };
         }
     };
 
     const findTextIndex = (x: number, y: number) => {
-        return texts.findIndex(
-            (t) =>
-                x >= t.x - 50 && x <= t.x + 50 && y >= t.y - 20 && y <= t.y + 20
-        );
+        const buffer = 50;
+        return texts.findIndex((t) => {
+            const textWidth =
+                t.text.length * parseInt(t.style.fontSize, 10) * 0.6;
+            const textHeight = parseInt(t.style.fontSize, 10);
+            return (
+                x >= t.x - buffer &&
+                x <= t.x + textWidth + buffer &&
+                y >= t.y - textHeight - buffer &&
+                y <= t.y + buffer
+            );
+        });
     };
 
     const handleDragStart = (
@@ -113,8 +122,9 @@ const Canvas: React.FC<CanvasProps> = ({
         };
         setTexts(updatedTexts);
 
+        resetCanvas(); 
+
         setInitialOffset({ x, y });
-        event.preventDefault();
     };
 
     const handleDragEnd = (
@@ -127,10 +137,12 @@ const Canvas: React.FC<CanvasProps> = ({
         const { x, y } = getEventCoordinates(event);
 
         const updatedTexts = [...texts];
+        const textToUpdate = updatedTexts[draggingIndex];
+
         updatedTexts[draggingIndex] = {
-            ...updatedTexts[draggingIndex],
-            x,
-            y,
+            ...textToUpdate,
+            x: x,
+            y: y,
         };
         setTexts(updatedTexts);
 
@@ -152,6 +164,7 @@ const Canvas: React.FC<CanvasProps> = ({
             texts.forEach((text) => {
                 ctx.font = `${text.style.fontSize} ${text.style.fontFamily}`;
                 ctx.fillStyle = text.style.color;
+                 ctx.textBaseline = "top";
                 ctx.fillText(text.text, text.x, text.y);
             });
         }
